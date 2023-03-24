@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}DevLove{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <link rel="icon" href="{{ asset ('Images/DevLove.png') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+
+        <header>
+            <div class="overlay">
+                <h1>Bienvenue sur DEVL♥VE</h1>
+                <p>Parce que même les développeurs ont besoin d’amour</p>
+                <br>
+                <button>
+                    <a> <a href="{{ path('accueil') }}">
+                            <img src=" {{ asset('Images/DevLove.png') }}" alt="logo" width="15px"></a>
+                </button>
+                <button>
+                    <a href="{{ path('app_login') }}">Login</a>
+                    </button>
+                <button>
+                    <a href="{{ path('app_register') }}">S'enregistrer</a>
+                </button>
+
+            </div>
+        </header>
+
+
+        {% block body %}{% endblock %}
+
+    <footer>
+
+        <div class="footer">
+            <div id="button"></div>
+            <div id="container">
+                <div id="cont">
+                    <div class="footer_center">
+                        <h3>Footer de merde</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

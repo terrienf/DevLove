@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Liste des connectés</h1>
+    <br>
+
+<div>
+    <ul>
+        {% for chaqueUser in User%}
+
+            <p>{{ chaqueUser.pseudo }}</p>
+
+
+
+    </ul>
+            </div>
+    {% endfor %}
+{% endblock %}

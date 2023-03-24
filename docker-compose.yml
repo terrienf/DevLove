@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  bdd:
+    container_name: devlove
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: monamour
+      MYSQL_DATABASE: devlovedb
+    expose:
+      - "3306"
+    ports:
+      - "3307:3306"
+    volumes:
+      - bdd-data:/var/lib/mysql
+
+volumes:
+  bdd-data:
